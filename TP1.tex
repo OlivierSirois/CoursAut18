@@ -1,0 +1,43 @@
+\documentclass[oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\usepackage{listings}
+\usepackage{pdfpages}
+\title{TP1 INF3610 - Questions Supplémentaires}
+\date{2018-09-21}
+\author{Olivier Sirois, 1626107- Cyrinne \$Nom de Famille(s)\$, \$Matricule\$}
+\setlength\parindent{0pt}
+\makeindex
+\pagenumbering{arabic}
+
+\begin{document}
+    \setcounter{page}{1}
+    \maketitle
+    %\tableofcontents
+    \subsection*{Question a}
+    Dans le contexte d'inversion de priorités, on peut définir le temps de blocage comme étant le temps qu'une tâche peut attendre avant d'être exécuté en raison qu'une autre tâche ait priorité. Dans un système non pré-emptif, une tâche prioritaire peut devoir attendre qu'une tâche moins prioritaire ait fini d'exécuter si celle-ci à déjà commencer son exécution.\\
+    
+    Dans un système pré-emptif, on pourrait définir le temps de pré-emption comme étant le temps de blocage qui est causé par la pré-emption. C'est-à-dire, le temps qu'une tâche doit attendre parce qu'une tâche plus prioritaire ait été commencer. La raison est que dans un système pré-emptif, l'ordonnanceur va effectuer un changement de contexte et exécuter la tâche plus prioritaire même si une autre tâche ait déjà commencer son exécution. L'ordonnanceur peut accomplir ce changement à l'aide d'un mécanisme d'interruption appellés \textbf{changement de contexte}.
+    
+    \subsection*{Question b}
+    \begin{enumerate}
+        \item l'ICPP en générale cause beaucoup moins de changement de contexte. En raison du fait que lorsqu'une ressource est en utilisation, la priorité change moins souvent que lorsqu'on fait l'héritage de priorité.
+        \item l'ICPP est plus facile à implémenter. Elle peut tout simplement être implémenter en attribuant une priorité aux ressources plus élevés que les tâches. Dans le contexte de $\mu$C, on peut donner une priorité spécifique directement au mutex.
+    \end{enumerate}
+
+    \subsection*{Question c}
+    Il serait préférable d'utiliser un sémaphore dans le cas ou on désirerait compter le nombre d'accès à un certain bout de code. Comme par exemple une section qui n'est pas critique en terme de ressources (mémoire) mais ou l'implémentation limite le nombre d'accès.
+    
+    \subsection*{Question d}
+    Ce laboratoire est un des rares laboratoires ou le travail à été complété en majorité dans le temps allouer (env. 90\% du laboratoire dans les périodes de lab). Personnellemnt je trouve que c'est une bonne chose, par contre je sais que ce n'est pas tout le monde qui est d'accord...\\
+    
+    Les énoncés sont très claires mais il y a parfois quelques ambigïtés sur les résultats attendus. Par contre ce n'est vraiment pas grave et la chargée de laboratoire répond très bien à nos questions lorsque c'est le cas.\\
+    
+    
+    
+\end{document}
